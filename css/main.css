@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --main-transition: 0.4s;
+}
+hr {
+    margin: 10px 0;
+}
+p {
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+}
+main .container {
+    width: 600px;
+    position: relative;
+    background-color: var(--White);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+main .container .main-img figure .img1 {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px 0 0 10px;
+}
+main .container .main-img figure .img2 {
+    display: none;
+}
+main .container .details {
+    padding: 30px;
+}
+main .container .details p:nth-child(1) {
+    letter-spacing: 5px;
+    padding: 15px 0;
+}
+main .container .details .more {
+    line-height: 1.5;
+}
+main .container .details h1 {
+    margin-bottom: 30px;
+    color: var(--Grey);
+}
+main .container .details .price {
+    padding: 15px 0;
+    font-family: "Fraunces", serif;
+    display: flex;
+    align-items: center;
+}
+main .container .details .after {
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--Dark-cyan);
+}
+main .container .details .before {
+    text-decoration-line: line-through;
+    color: var(--Dark-grayish-blue);
+}
+main .container .details .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Dark-cyan);
+    padding: 10px 15px;
+    border-radius: 10px;
+    gap: 10px;
+    transition: var(--main-transition);
+}
+main .container .details .cart:hover {
+    background-color: var(--Very-dark-blue);
+}
+main .container .details .cart a {
+    text-decoration: none;
+    color: var(--White);
+    font-weight: 600;
+    font-size: 14px;
+} 
+@media (max-width: 650px){
+    main .container {
+        width: 350px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    main .container .main-img figure .img1 {
+        display: none;
+    }
+    main .container .main-img figure .img2 {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+}
